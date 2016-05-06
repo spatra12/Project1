@@ -1,0 +1,53 @@
+package sandwichProject;
+
+public class Sandwich implements ThingsInBread
+{
+	private Meat meat_type; 
+	private Bread bread_type; 
+	private Veggie veg; 
+	private Sauce sauce; 
+	
+	public Sandwich()
+	{
+		
+	}	
+	
+	public Sandwich(Meat mt, Bread brd, Veggie vg, Sauce sc)
+	{
+		
+	}
+	
+	public void setWich(Meat mt, Bread brd, Veggie vg, Sauce sc)
+	{
+		setMeat(mt);
+		setBread(brd);
+		setVeg(vg);
+		setSauce(sc);
+	}
+	
+	public void setMeat(Meat mt)
+	{
+		meat_type = mt; 
+	}
+	
+	public void setBread(Bread brd)
+	{
+		bread_type = brd; 
+	}
+	
+	public void setVeg(Veggie vg)
+	{
+		veg = vg; 
+	}
+	
+	public void setSauce(Sauce sc)
+	{
+		sauce = sc; 
+	}
+	
+	public void numThings()
+	{
+		
+	}
+	
+}

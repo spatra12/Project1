@@ -17,11 +17,5 @@ public abstract class Ingredient {
 		this.calories = calories;
 	}
 	
-	abstract void prep(); 
-	
-	public String toString()
-	{
-		return ""; 
-	}
 
 }

@@ -1,0 +1,15 @@
+package sandwichProject;
+
+public class Sandwich implements ThingsInBread
+{
+	public Sandwich()
+	{
+		
+	}
+	
+	public void numThings()
+	{
+		
+	}
+	
+}
