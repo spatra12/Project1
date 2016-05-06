@@ -3,7 +3,7 @@ package sandwichProject;
 public class Veggie extends Ingredient {
 	private String cookingMethod = "raw";
 	
-	public Veggie(String method) {
+	public Meat(String method) {
 		cookingMethod = method;
 	}
 	
