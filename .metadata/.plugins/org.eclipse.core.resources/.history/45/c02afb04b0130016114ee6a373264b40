@@ -1,0 +1,18 @@
+package sandwichProject;
+
+public class Bread extends Ingredient {
+	private boolean toasted = false;
+	
+	public void toast () {
+		toasted = true;
+	}
+	
+	public void unToast () {
+		toasted = false;
+	}
+	
+	public boolean isToasted () {
+		return toasted;
+	}
+	
+}

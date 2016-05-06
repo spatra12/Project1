@@ -12,7 +12,7 @@ public class Sauce extends Ingredient {
 	}
 	
 	public String prep() {
-		if(isWarm)
+		if(warm)
 			return "warm";
 		else
 			return "cold";

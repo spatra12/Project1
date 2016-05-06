@@ -3,14 +3,11 @@ package sandwichProject;
 public class Bread extends Ingredient {
 	private boolean toasted = false;
 	
-	public Bread(boolean toast) {
-		toasted = toast;
-	}
-	public void toast() {
+	public void toast () {
 		toasted = true;
 	}
 	
-	public String prep() {
+	public String prep () {
 		if(toasted)
 			return "toasted";
 		else
