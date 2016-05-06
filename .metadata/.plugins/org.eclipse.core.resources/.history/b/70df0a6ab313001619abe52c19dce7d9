@@ -47,7 +47,7 @@ public class Sandwich implements ThingsInBread
 	
 	public void numThings()
 	{
-		int num = 0; 
+		
 	}
 	
 }
