@@ -1,5 +1,5 @@
 package sandwichProject;
 
-public class Sauce {
+public class Sauce extends Ingredient {
 
 }
