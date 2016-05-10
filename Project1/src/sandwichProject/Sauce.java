@@ -3,12 +3,17 @@ package sandwichProject;
 public class Sauce extends Ingredient {
 	private boolean isWarm;
 	
-	public Sauce(boolean warm) {
+	public Sauce(String name,boolean warm) {
+		super(name);
 		isWarm = warm;
 	}
 	
-	public void isWarm(boolean warm) {
+	public void setWarm(boolean warm) {
 		isWarm = warm;
+	}
+	
+	public boolean isWarm() {
+		return isWarm;
 	}
 	
 	public String prep() {

@@ -1,0 +1,25 @@
+package sandwichProject;
+
+public class Meat extends Ingredient {
+	private boolean cooked;
+	
+	public Meat(String name,boolean cook) {
+		super(name);
+		isCooked(cook);
+	}
+	
+	public void setCooked(boolean cook) {
+		cooked = cook;
+	}
+	
+	public boolean isCooked() {
+		return cooked;
+	}
+	public String prep() {
+		if(isCooked)
+			return "cooked";
+		else
+			return "rare";
+	}
+	
+}

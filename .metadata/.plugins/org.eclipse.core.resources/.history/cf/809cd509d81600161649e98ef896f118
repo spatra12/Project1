@@ -1,0 +1,24 @@
+package sandwichProject;
+
+public class Veggie extends Ingredient {
+	private boolean method;
+	
+	public Veggie(String name,boolean method) {
+		super(name);
+		setCookingMethod(method); 
+	}
+	
+	public void setCookingMethod(boolean method) {
+		this.method = method;
+	}
+	
+	public boolean getCookingMethod() {
+		return method;
+	}
+	
+	public boolean isRaw() {
+		
+		
+		return cookingMethod;
+	}
+}

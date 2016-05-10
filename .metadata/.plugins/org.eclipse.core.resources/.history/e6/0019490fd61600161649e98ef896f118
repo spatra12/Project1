@@ -1,0 +1,23 @@
+package sandwichProject;
+
+import java.util.Scanner;
+
+public class WichRunner {
+	
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in); 
+		
+		System.out.println("THIS IS A SANDWICH MAKER!!!\nWould you like to make a sandwich? (y/n)");
+		
+		if((input.next().equals("Y") || input.next().equals("y"))
+		{
+			Sandwich sandwich = new Sandwich();
+			System.out.println("what meat do you want?");
+			String meat = input.next(); 
+			System.out.println("do you want it rare or cooked?");
+			Meat mt = new Meat(meat, input.next());
+		}
+	}
+	
+}

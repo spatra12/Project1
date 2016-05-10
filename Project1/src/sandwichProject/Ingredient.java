@@ -4,6 +4,10 @@ public abstract class Ingredient {
 
 	private String name;
 	private int calories;
+	
+	public Ingredient(String name) {
+		setName(name);
+	}
 	public String getName() {
 		return name;
 	}

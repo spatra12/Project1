@@ -1,0 +1,23 @@
+package sandwichProject;
+
+public class Meat extends Ingredient {
+	private boolean isCooked;
+	
+
+	public Meat(String name, String method) {
+		super(name);
+		setCookingMethod(method);
+	}
+	
+	public void setCookingMethod(String method) {
+		cookingMethod = method;
+	}
+	
+	public String getCookingMethod() {
+		return cookingMethod;
+	}
+	
+	public boolean isCooked()
+	}
+	
+}

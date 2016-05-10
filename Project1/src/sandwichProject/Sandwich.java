@@ -14,7 +14,7 @@ public class Sandwich implements ThingsInBread
 	
 	public Sandwich(Meat mt, Bread brd, Veggie vg, Sauce sc)
 	{
-		
+		setWich(mt, brd, vg, sc);
 	}
 	
 	public void setWich(Meat mt, Bread brd, Veggie vg, Sauce sc)
@@ -59,6 +59,10 @@ public class Sandwich implements ThingsInBread
 			num++; 
 		
 		return num; 
+	}
+	
+	public String toString(){
+		return meat_type.getName() + bread_type.getName() + veg.getName() + sauce.getName();
 	}
 	
 }
