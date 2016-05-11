@@ -5,18 +5,14 @@ public class Bread extends Ingredient {
 	
 	public Bread(String name,boolean toast) {
 		super(name);
-		setToast(toast);
-	}
-	public void setToast(boolean toast) {
 		toasted = toast;
 	}
-	
-	public boolean isToasted() {
-		return toasted;
+	public void toast() {
+		toasted = true;
 	}
 	
 	public String prep() {
-		if(isToasted())
+		if(toasted)
 			return "toasted";
 		else
 			return "untoasted";

@@ -1,0 +1,68 @@
+package sandwichProject;
+
+public class Sandwich implements ThingsInBread
+{
+	private Meat meat_type; 
+	private Bread bread_type; 
+	private Veggie veg; 
+	private Sauce sauce; 
+	
+	public Sandwich()
+	{
+		
+	}	
+	
+	public Sandwich(Meat mt, Bread brd, Veggie vg, Sauce sc)
+	{
+		setWich(mt, brd, vg, sc);
+	}
+	
+	public void setWich(Meat mt, Bread brd, Veggie vg, Sauce sc)
+	{
+		setMeat(mt);
+		setBread(brd);
+		setVeg(vg);
+		setSauce(sc);
+	}
+	
+	public void setMeat(Meat mt)
+	{
+		meat_type = mt; 
+	}
+	
+	public void setBread(Bread brd)
+	{
+		bread_type = brd; 
+	}
+	
+	public void setVeg(Veggie vg)
+	{
+		veg = vg; 
+	}
+	
+	public void setSauce(Sauce sc)
+	{
+		sauce = sc; 
+	}
+	
+	public int numThings()
+	{
+		int num = 0; 
+		
+		if(meat_type != null)
+			num++; 
+		if(bread_type != null)
+			num++; 
+		if(veg != null)
+			num++; 
+		if(sauce!= null)
+			num++; 
+		
+		return num; 
+	}
+	
+	public String toString(){
+		return meat_type.getName() + bread_type.getName() + veg.getName() + sauce.getName();
+	}
+	
+}

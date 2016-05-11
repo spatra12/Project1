@@ -1,6 +1,10 @@
 package sandwichProject;
 
-public class Sandwich implements ThingsInBread
+import java.awt.Graphics;
+import java.awt.Color;
+import java.awt.Canvas;
+
+public class Sandwich extends Canvas implements ThingsInBread
 {
 	private Meat meat_type; 
 	private Bread bread_type; 
@@ -9,12 +13,17 @@ public class Sandwich implements ThingsInBread
 	
 	public Sandwich()
 	{
-		
+		setSize(800,600);
+		setBackground(Color.WHITE);   	
+		setVisible(true);
 	}	
 	
 	public Sandwich(Meat mt, Bread brd, Veggie vg, Sauce sc)
 	{
 		setWich(mt, brd, vg, sc);
+		setSize(800,600);
+		setBackground(Color.WHITE);   	
+		setVisible(true);
 	}
 	
 	public void setWich(Meat mt, Bread brd, Veggie vg, Sauce sc)
@@ -45,6 +54,23 @@ public class Sandwich implements ThingsInBread
 		sauce = sc; 
 	}
 	
+	
+	public Meat getMeat_type() {
+		return meat_type;
+	}
+
+	public Bread getBread_type() {
+		return bread_type;
+	}
+
+	public Veggie getVeg() {
+		return veg;
+	}
+
+	public Sauce getSauce() {
+		return sauce;
+	}
+
 	public int numThings()
 	{
 		int num = 0; 
@@ -61,8 +87,50 @@ public class Sandwich implements ThingsInBread
 		return num; 
 	}
 	
+	public void paint (Graphics window) {
+
+		window.setColor(Color.RED);
+		window.drawString("CONGRATS", 200, 200);
+		
+		System.out.println(bread_type + " bread");
+		if(bread_type != null)
+		{
+			if(getBread_type().isToasted())
+				window.setColor(Color.ORANGE);
+			else
+				window.setColor(Color.YELLOW);
+			window.fillRect(300, 300, 150, 30);
+			window.fillRect(300, 370, 150, 30);
+		}
+		
+		if(meat_type != null)
+		{
+			if(getMeat_type().isCooked())
+				window.setColor(new Color(78, 48, 35));
+			else
+				window.setColor(Color.RED);
+			window.fillRect(310, 330, 130, 20);
+		}
+		if(veg != null)
+		{
+			if(getVeg().isGrilled())
+				window.setColor(new Color(27, 64, 25));
+			else
+				window.setColor(new Color(73, 185, 69));
+			window.fillRect(310, 350, 130, 10);
+		}
+
+		if(sauce!= null)
+		{window.setColor(new Color(235, 168, 124));
+		window.fillRect(310, 360, 130, 10);
+		}
+		
+		
+
+	}
+	
 	public String toString(){
-		return meat_type.getName() + bread_type.getName() + veg.getName() + sauce.getName();
+		return meat_type.getName() + " " + veg.getName() + " " + sauce.getName() + " on " +  bread_type.getName();
 	}
 	
 }

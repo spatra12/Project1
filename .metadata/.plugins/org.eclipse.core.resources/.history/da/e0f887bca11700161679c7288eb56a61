@@ -1,27 +1,8 @@
 package sandwichProject;
 
 import java.util.Scanner;
-import javax.swing.JFrame;
 
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-public class WichRunner extends JFrame {
-	
-	private static final int WIDTH = 800;
-	private static final int HEIGHT = 600;
-	
-	public WichRunner(Sandwich sand) 	{
-		super("MMMM SANDWICH");
-
-		setSize(WIDTH,HEIGHT);
-
-		getContentPane().add(sand);
-
-		setVisible(true);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-	}
+public class WichRunner {
 	
 	public static void main(String[] args)
 	{
@@ -32,12 +13,14 @@ public class WichRunner extends JFrame {
 		
 		if((choice.equals("Y") || choice.equals("y")))
 		{
+			//System.out.print("ey");
+			Sandwich sandwich = new Sandwich();
 			System.out.println("what meat do you want?");
 			String meat = input.next(); 
-			System.out.println("do you want it rare or well done?");
+			System.out.println("do you want it rare or cooked?");
 			
 			boolean mt = false; 
-			if(input.next().equals("well done"))
+			if(input.next().equals("yes"))
 				mt = true; 
 			
 			Meat moat = new Meat(meat, mt);
@@ -68,16 +51,15 @@ public class WichRunner extends JFrame {
 			System.out.println("do you want it grilled or raw?");
 			
 			boolean v = false; 
-			if(input.next().equals("grilled"))
+			if(input.next().equals("yes"))
 				v = true; 
-
+				//Bread brd = new Bread(bread, true);
+			
 			Veggie veg = new Veggie(veggie, v);
 			
 			Sandwich which = new Sandwich(moat, brod, veg, soce); 
 			System.out.print(which.toString()); 
-			WichRunner run = new WichRunner(which);
 		}
 	}
 	
 }
-
