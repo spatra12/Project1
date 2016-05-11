@@ -90,9 +90,9 @@ public class Sandwich extends Canvas implements ThingsInBread
 	public void paint (Graphics window) {
 
 		window.setColor(Color.RED);
-		window.drawString(toString(), 200, 200);
+		window.drawString("CONGRATS", 200, 200);
 		
-		//System.out.println(bread_type + " bread");
+		System.out.println(bread_type + " bread");
 		if(bread_type != null)
 		{
 			if(getBread_type().isToasted())
@@ -130,7 +130,7 @@ public class Sandwich extends Canvas implements ThingsInBread
 	}
 	
 	public String toString(){
-		return meat_type.toString() + " with " + veg.toString() + " and " + sauce.toString() + " on " +bread_type.toString()+ " bread";
+		return meat_type.toString() + " " + veg.toString() + " " + sauce.toString() + " on " +  bread_type.toString();
 	}
 	
 }

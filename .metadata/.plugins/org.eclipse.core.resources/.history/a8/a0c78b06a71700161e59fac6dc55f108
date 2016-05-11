@@ -130,7 +130,7 @@ public class Sandwich extends Canvas implements ThingsInBread
 	}
 	
 	public String toString(){
-		return meat_type.toString() + " with " + veg.toString() + " and " + sauce.toString() + " on " +bread_type.toString()+ " bread";
+		return meat_type.toString() + " with " + veg.toString() + " and " + sauce.toString() + " on " +bread_type.toString();
 	}
 	
 }
